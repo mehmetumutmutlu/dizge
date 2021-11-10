@@ -9,9 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - p2g function
 - Some code improvements
 
-## [0.1.2] - 2021-11-10
+## [0.1.3] - 2021-11-10
 ### Fixed
-- Some code fixations.
+- Fix some codes. It's stable of [0.1.2].
+
+## [0.1.2] - 2021-11-10 *(Removed)*
+### Fixed
+- Fix some codes. But it has a critical error. Deleted.
 
 ## [0.1.1] - 2021-05-20
 ### Fixed
@@ -24,5 +28,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - syllable_o and syllable_p functions
 - countSyllable function
 
+[0.1.3]: https://pypi.org/project/dizge/0.1.3/
+[0.1.2]: https://pypi.org/project/dizge/0.1.2/
 [0.1.1]: https://pypi.org/project/dizge/0.1.1/
 [0.1.0]: https://pypi.org/project/dizge/0.1.0/

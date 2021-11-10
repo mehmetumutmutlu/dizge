@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text(encoding="utf-8")
 # This call to setup() does all the work
 setup(
     name="dizge",
-    version="0.1.2",
+    version="0.1.3",
     description="The OOP based grammar analyzer for Turkish",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -26,6 +26,8 @@ setup(
         "Intended Audience :: Education",
         "Intended Audience :: Information Technology",
         "Intended Audience :: Science/Research",
-        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
     ]
 )

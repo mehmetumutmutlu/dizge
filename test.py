@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
-from dizge import *
+import dizge
 
 # SIMULATION OF PHONETIC COMPETENCE
-for i in [vars(phoneme) for phoneme in vowels]:
+for i in [vars(phoneme) for phoneme in dizge.vowels]:
     print(i)
 # {'phonemeID': 'v001', 'grapheme': 'a', 'rounding': 0, 'mandible': 4, 'tongue': 3}
 # {'phonemeID': 'v002', 'grapheme': 'e', 'rounding': 0, 'mandible': 4, 'tongue': 1}
@@ -14,7 +14,7 @@ for i in [vars(phoneme) for phoneme in vowels]:
 # {'phonemeID': 'v007', 'grapheme': 'u', 'rounding': 1, 'mandible': 1, 'tongue': 3}
 # {'phonemeID': 'v008', 'grapheme': 'ü', 'rounding': 1, 'mandible': 1, 'tongue': 1}
 
-for j in [vars(phoneme) for phoneme in consonants]:
+for j in [vars(phoneme) for phoneme in dizge.consonants]:
     print(j)
 # {'phonemeID': 'c001', 'grapheme': 'p', 'manner': 1, 'place': 1, 'voicing': 0}
 # {'phonemeID': 'c002', 'grapheme': 'b', 'manner': 1, 'place': 1, 'voicing': 1}
@@ -38,24 +38,24 @@ for j in [vars(phoneme) for phoneme in consonants]:
 # {'phonemeID': 'c020', 'grapheme': 'l', 'manner': 8, 'place': 5, 'voicing': 1}
 
 # Feature Functions
-print(isVowel("a"))  # True
-print(isBilabial("g"))  # False
+print(dizge.isVowel("a"))  # True
+print(dizge.isBilabial("g"))  # False
 
 # TOOLS
 # Separation into Syllables
-print(syllable_p("ANKARA'DA     "))  # ['an', 'ka', 'ra', 'da']
-print(syllable_p("Afyonkarahisarlılaştıramadıklarımızdanmışçasına"))
+print(dizge.syllable_p("ANKARA'DA     "))  # ['an', 'ka', 'ra', 'da']
+print(dizge.syllable_p("Afyonkarahisarlılaştıramadıklarımızdanmışçasına"))
 # ['af', 'yon', 'ka', 'ra', 'hi', 'sar', 'lı', 'laş', 'tı', 'ra', 'ma', 'dık', 'la', 'rı', 'mız', 'dan', 'mış', 'ça','sı', 'na']
 
 # soft g Transformation Tool
-print(softG("dağ"))  # 'da:'
-print(softG("doğru"))  # 'doˑru'
+print(dizge.softG("dağ"))  # 'da:'
+print(dizge.softG("doğru"))  # 'doˑru'
 
 # Phonetic Transcriptions Tool
-print(g2p("ben"))  # 'bɛn'
-print(g2p("kelebek"))  # 'cʰelɛbɛc'
+print(dizge.g2p("ben"))  # 'bɛn'
+print(dizge.g2p("kelebek"))  # 'cʰelɛbɛc'
 
 # Simple Usage
 words = ["ankara", "dil", "bilim", "dilbilim"]
-result = analyze(words, ["g2p", "syllable_o", "syllable_p", "countSyllable", "harmony"])
+result = dizge.analyze(words, ["g2p", "syllable_o", "syllable_p", "countSyllable", "harmony"])
 print(result)
