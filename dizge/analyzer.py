@@ -83,10 +83,10 @@ def analyze(data, mode):
     if "syllable_p" in mode:
         result = [tp.syllable_p(word) for word in data]
         dict["syllable_p"] = result
-    if "countSylable" in mode:
+    if "countSyllable" in mode:
         result = [tp.countSyllable(word) for word in data]
-        dict["countSylable"] = result
+        dict["countSyllable"] = result
     if "harmony" in mode:
-        result = [tp.vowelHarmony(word) for word in data]
+        result = [tp.harmony(word) for word in data]
         dict["harmony"] = result
     return dict
